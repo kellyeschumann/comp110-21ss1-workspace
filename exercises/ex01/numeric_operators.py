@@ -14,8 +14,8 @@ numberTwo: str = input("What is the second number? ")
 print("You entered: ")
 print(numberTwo)
 
-print(l + ": " + numberOne)
-print(r + ": " + numberTwo)
+print(left + ": " + numberOne)
+print(right + ": " + numberTwo)
 
 integerOne = int(numberOne)
 integerTwo = int(numberTwo)
