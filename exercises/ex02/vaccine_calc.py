@@ -1,4 +1,4 @@
-"""When a user inputs the population, number of vaccines already administered, number of vaccines administered per day, and target percent vaccinated, the program will give the amount of days needed, as well as the date that it falls on."""
+"""Vaccine calculator."""
 
 __author__ = "730314660"
 
@@ -43,4 +43,4 @@ print("Population: " + pop)
 print("Doses administered: " + adm)
 print("Doses per day: " + per_day)
 print("Target percent vaccinated: " + target)
-print("We will reach " + (target) + "% vaccination in " + (str_days3) + " days, which falls on " + (future.strftime("%B %d, %Y")) )
+print("We will reach " + (target) + "% vaccination in " + (str_days3) + " days, which falls on " + (future.strftime("%B %d, %Y")))
