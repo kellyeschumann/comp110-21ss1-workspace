@@ -1,11 +1,10 @@
-"""Data utility functions."""
+"""Project 01."""
 
 __author__ = "730314660"
 
 from csv import DictReader
 
 
-# TODO 0: Paste the functions we've been working on in class
 def read_csv_rows(path: str) -> list[dict[str, str]]:
     """Read a CSV file and return a list of its rows."""
     file_handle = open(path, "r", encoding="utf8")
@@ -50,7 +49,6 @@ def select(table: dict[str, list[str]], cols: list[str]) -> dict[str, list[str]]
     return result
 
 
-# TODO 1: Define the count function, and its logic, here.
 def count(table: list[str]) -> dict[str, int]:
     """Counts the frequency of values."""
     result: dict[str, int] = {}

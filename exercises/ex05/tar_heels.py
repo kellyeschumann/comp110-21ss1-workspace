@@ -9,6 +9,7 @@ def main() -> None:
     # TODO 2: Print the response of calling the tar_heels function here.
     print(tar_heels(choice)) 
 
+
 # TODO 1: Define the tar_heels function, and its logic, here.
 def tar_heels(number: int) -> str:
     """Gives a phrase according to the number inputed."""
@@ -20,7 +21,6 @@ def tar_heels(number: int) -> str:
         return "HEELS"
     else:
         return "CAROLINA"
-
 
 
 if __name__ == "__main__":

@@ -22,9 +22,8 @@ def fortune_cookie() -> str:
         return "You will meet someone next week who will change your life."
     if rand == 3:
         return "You have already met the love of your life."
-    if rand == 4:
+    else:
         return "A difficult journey leads to a happy ending."
-
 
 
 # Python Idiom for "starting" the program when run as a module.

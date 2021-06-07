@@ -1,11 +1,6 @@
 """Data utility functions."""
-
-__author__ = "730314660"
-
 from csv import DictReader
 
-
-# TODO 0: Paste the functions we've been working on in class
 def read_csv_rows(path: str) -> list[dict[str, str]]:
     """Read a CSV file and return a list of its rows."""
     file_handle = open(path, "r", encoding="utf8")
@@ -15,14 +10,12 @@ def read_csv_rows(path: str) -> list[dict[str, str]]:
         table.append(row)
     return table
 
-
 def column_values(table: list[dict[str, str]], column: str) -> list[str]:
     """Return a column's values."""
     values: list[str] = []
     for row in table:
         values.append(row[column])
     return values
-
 
 def columnar(table: list[dict[str, str]]) -> dict[str, list[str]]:
     """Convert a table of rows to a table of columns."""
@@ -50,13 +43,19 @@ def select(table: dict[str, list[str]], cols: list[str]) -> dict[str, list[str]]
     return result
 
 
-# TODO 1: Define the count function, and its logic, here.
-def count(table: list[str]) -> dict[str, int]:
-    """Counts the frequency of values."""
-    result: dict[str, int] = {}
-    for values in table:
-        if result.get(values) is None:
-            result[values] = 1
-        else:
-            result[values] = result[values] + 1
-    return result
+table: list[dict[str, str]] = read_csv_rows("data/weather.csv")
+print(table)
+column_oriented = columnar(table)
+print(column_oriented)
+#print(head(column_oriented, 1))
+subset_col_oriented = select(column_oriented, ["date", "low"])
+print(subset_col_oriented)
+
+# dates = column_values(table, "date")
+# print(dates)
+# high = column_values(table, "high")
+# print(high)
+
+print(f"Extracting column names from our row-oriented table:")
+print(table[0].keys())
+
